@@ -19,7 +19,7 @@
 		<div ng-controller ="mainCtrl" class="list">
 			
 			<input ng-model="todo.completed" type="checkbox"></input>
-			<label class="editing-label">A sample TODO</label>
+			<label class="editing-label">{{todo.name}}</label>
 			<input ng-model="todo.name" class="editing-label" type="text"></input>	
 
 			<div class="actions">
