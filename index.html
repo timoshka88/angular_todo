@@ -16,17 +16,21 @@
 		<!-- <div hello-world></div> -->
 		<h1>My TODO's</h1>
 
-		<div class="list">
+		<div ng-controller ="mainCtrl" class="list">
+			
 			<input type="checkbox"></input>
 				<label class="editing-label">A sample TODO</label>
 				<input class="editing-label" type="text"></input>	
+
+			<div class="actions">
+				<a href="">edit</a> <!-- could be button tags -->
+				<a href="" ng-click="helloWorld()">save</a> <!-- href is empty because it's a single page app -->
+				<a href="" class="delete">delete</a>
+			</div>
+		
 		</div>
 
-		<div class="actions">
-			<a href="">edit</a> <!-- could be button tags -->
-			<a href="">save</a> <!-- href is empty because it's a single page app -->
-			<a href="" class="delete">delete</a>
-		</div>
+
 	
 	</body>
 
