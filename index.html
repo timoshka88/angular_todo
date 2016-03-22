@@ -18,9 +18,9 @@
 
 		<div ng-controller ="mainCtrl" class="list">
 			
-			<input type="checkbox"></input>
-				<label class="editing-label">A sample TODO</label>
-				<input class="editing-label" type="text"></input>	
+			<input ng-model="todo.completed" type="checkbox"></input>
+			<label class="editing-label">A sample TODO</label>
+			<input ng-model="todo.name" class="editing-label" type="text"></input>	
 
 			<div class="actions">
 				<a href="">edit</a> <!-- could be button tags -->
