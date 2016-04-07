@@ -18,7 +18,7 @@
 
 		<div ng-controller ="mainCtrl" class="list">
 			
-			<div ng-repeat = "todo in todos">
+			<div class="item" ng-class="{'editing-item': editing}" ng-repeat = "todo in todos">
 
 				<input ng-model="todo.completed" type="checkbox"></input>
 				<label ng-hide="editing" class="editing-label">{{todo.name}}</label> <!-- when editing = true, hide label, when false show -->
@@ -26,7 +26,7 @@
 				<div class="actions">
 					<a href="" ng-click="editing = !editing">edit</a> <!-- could be button tags -->
 					<a href="" ng-click="helloWorld()">save</a> <!-- href is empty because it's a single page app -->
-					<a href="" class="delete">delete</a>
+					<a href="" class="Delete">delete</a>
 				
 				</div>
 
