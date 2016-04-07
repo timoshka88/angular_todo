@@ -17,6 +17,10 @@
 		<h1>My TODO's</h1>
 
 		<div class="list" ng-controller ="mainCtrl">
+
+			<div class="add">
+				<a href="" ng-click="addTodo()">+ Add a New Task</a>
+			</div>
 			
 			<div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited}" ng-repeat="todo in todos">
 
@@ -25,8 +29,8 @@
 				<input ng-change="todo.edited=true" ng-blur="editing = false" ng-show="editing" ng-model="todo.name" class="editing-label" type="text"></input>	<!-- when true it will show the editing content-->
 				<div class="actions">
 					<a href="" ng-click="editing = !editing">edit</a> <!-- could be button tags -->
-					<a href="" ng-click="helloWorld()">save</a> <!-- href is empty because it's a single page app -->
-					<a href="" class="Delete">delete</a>
+					<a href="" ng-click="saveTodo(todo)">save</a> <!-- href is empty because it's a single page app -->
+					<a href="" ng-click="deleteTodo(todo, $index)" class="Delete">  delete</a> <!-- $index is a var available thanks to ng-repeat -->
 				
 				</div>
 
