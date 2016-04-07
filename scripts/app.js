@@ -17,5 +17,13 @@ angular.module("todoListApp", [])
 	this.getTodos = function(callback){
 		$http.get('mock/todos.json') //takes the url as a first param
 		.then(callback)
-	} 
+	};
+
+	this.deleteTodo = function(todo){
+		console.log('The' + todo.name + 'has been deleted')
+	};
+
+	this.saveTodo = function(todo){
+		console.log(('The' + todo.name + 'has been saved'))
+	};
 });
