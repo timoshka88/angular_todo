@@ -5,6 +5,12 @@ angular.module("todoListApp", [])
 	$scope.helloWorld = function(){
 		console.log("Hello there!!!!! I'm the Main Ctrl")
 	};
+	
+	$scope.addTodo = function(){
+		var todo = {name: "This is a new Todo"};
+		$scope.todos.push(todo);
+	};
+
 	dataService.getTodos(function(response){
 		console.log(response.data);
 		$scope.todos = response.data;
