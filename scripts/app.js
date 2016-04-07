@@ -15,6 +15,11 @@ angular.module("todoListApp", [])
 		$scope.todos.splice($index, 1);
 	};
 
+	$scope.saveTodo = function(todo){
+		dataService.saveTodo(todo);
+
+	}
+
 })
 .service('dataService', function($http){
 	this.helloConsole = function(){ console.log("Hello Console this is Setvice")};
